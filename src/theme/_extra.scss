@@ -1,0 +1,51 @@
+@font-face {
+  font-family: Tajawal;
+  // src: url(../../assets/fonts/Tajawal-Regular.ttf) format("opentype");
+  src: url(../assets/fonts/Tajawal-Regular.ttf) format("opentype");
+}
+button,
+span,
+a,
+label,
+form,
+textarea,
+input,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Tajawal, sans-serif !important;
+}
+.p-menuitem-icon,
+.p-element {
+  font-family: "Font Awesome 6 Free" !important;
+}
+.logo {
+  width: 150px;
+  height: 53.659px;
+  align-self: center;
+}
+.base-theme {
+  --ButtonColor: linear-gradient(
+    150.57deg,
+    #88774f 15.91%,
+    #88774f 48.08%,
+    #88774f 88.94%
+  );
+  --mainGradient: linear-gradient(
+    150.57deg,
+    #88774f 15.91%,
+    #88774f 48.08%,
+    #88774f 88.94%
+  );
+
+  --mainColor: #88774f;
+  --maintextColor: #88774f;
+  --SectextColor: #9e9e9e;
+  --tHeadTextColor: #88774f;
+
+  --goldClor: #ffc048;
+}

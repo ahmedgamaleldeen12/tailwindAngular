@@ -1,0 +1,423 @@
+@import "extra.scss";
+
+.default-table {
+  width: 100%;
+  text-align: center;
+  border-color: transparent;
+  border-radius: var(--8, 8px) var(--8, 8px) 0px 0px;
+  th {
+    background-color: rgba(var(--mainColor), 0.2);
+    color: var(--mainColor);
+    text-align: right;
+    font-feature-settings:
+      "clig" off,
+      "liga" off;
+    font-family: IBM Plex Sans Arabic;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    text-align: center;
+    padding: 10px;
+    border: solid #f1f8f3 1px;
+  }
+  td {
+    color: var(--SectextColor);
+    border: 1px solid rgba(238, 238, 238, 0.93) !important;
+    background: var(--white-100, #fff) !important;
+    padding: 10px;
+  }
+}
+
+::placeholder {
+  color: var(--SectextColor);
+  opacity: 5;
+}
+.button {
+  background: var(--mainColor);
+}
+
+.search-container {
+  position: relative;
+  padding: 0 10px;
+  height: 36px !important;
+}
+.search-input {
+  padding: 5px;
+  padding-right: 40px;
+  width: 100%;
+}
+.search-button {
+  position: absolute;
+  top: 3px;
+  right: 15px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+.search-button i {
+  color: #757575;
+  background: white;
+}
+a {
+  cursor: pointer;
+}
+.on-click-class {
+  &:active {
+    background: var(--mainColor);
+  }
+}
+.active {
+  background: var(--mainColor);
+}
+.image-button {
+  border: none !important;
+  background: none !important;
+}
+.blue-title,
+.orange-title,
+.gray-title,
+.green-title {
+  span {
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+}
+.gray-title {
+  span {
+    background-color: #c5c5c51a;
+    color: gray;
+  }
+}
+.blue-title {
+  span {
+    background-color: #407ff51a;
+    color: var(--mainColor);
+  }
+}
+.orange-title {
+  span {
+    background-color: #f2ae631a;
+    color: #f2ae63;
+  }
+}
+.green-title {
+  span {
+    background-color: #40f5841a;
+    color: #29b95f;
+  }
+}
+.info-clause {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--mainColor) 8%, transparent);
+}
+.info-head,
+.info-value {
+  text-align: right;
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  font-family: IBM Plex Sans Arabic;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.15px;
+}
+.info-head {
+  color: var(--mainColor);
+}
+.info-value {
+  color: var(--table-input, #757575);
+}
+.default-form {
+  label {
+    color: var(--title, var(--mainColor));
+    text-align: right;
+    font-family: IBM Plex Sans Arabic;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px;
+  }
+  .ng-option {
+    color: #c5c5c5 !important;
+  }
+  .ng-option-selected {
+    color: var(--mainColor) !important;
+    background-color: #eaf7ff !important;
+  }
+  .ng-input {
+    input {
+      border: none !important;
+    }
+  }
+  .ng-select-container {
+    // padding: 20px !important;
+    border-radius: var(--8, 8px) !important;
+    border: 1px solid var(--button-new, var(--mainColor)) !important;
+    &:read-only {
+      color: gray !important;
+      border-color: rgba(128, 128, 128, 0.479) !important;
+    }
+  }
+}
+
+input {
+  padding: 10px var(--16, 16px);
+  border-radius: var(--8, 8px);
+  border: 1px solid #e0e0e0;
+  transition: all 500ms ease-in-out !important;
+  &:focus {
+    border: solid var(--mainColor) 1px !important;
+    box-shadow: none !important;
+    outline: none !important;
+    transition: all 500ms ease-in-out !important;
+  }
+  &:read-only {
+    color: gray !important;
+    border-color: rgba(128, 128, 128, 0.479) !important;
+  }
+}
+
+input ::ng-deep {
+  &.ng-input {
+    &:focus {
+      border: none;
+    }
+  }
+}
+
+input::-webkit-input-placeholder {
+  color: gray !important;
+}
+input:focus::-webkit-input-placeholder {
+  color: var(--mainColor) !important;
+}
+
+/* Firefox < 19 */
+input:-moz-placeholder {
+  color: gray !important;
+}
+input:focus:-moz-placeholder {
+  color: var(--mainColor) !important;
+}
+
+/* Firefox > 19 */
+input::-moz-placeholder {
+  color: gray !important;
+}
+input:focus::-moz-placeholder {
+  color: var(--mainColor) !important;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+  color: gray !important;
+}
+input:focus:-ms-input-placeholder {
+  color: var(--mainColor) !important;
+}
+textarea:-moz-placeholder, /* Firefox 18- */
+textarea::-moz-placeholder, /* Firefox 19+ */
+textarea:-ms-input-placeholder, /* IE 10+ */
+textarea::-webkit-input-placeholder, /* Webkit based */
+textarea::placeholder {
+  /* Modern browsers */
+  color: gray !important;
+}
+textarea::placeholder {
+  color: gray !important;
+}
+.pagination {
+  margin: 30px 0px;
+  button:disabled {
+    border-radius: 4px;
+    background: linear-gradient(180deg, var(--mainColor), var(--maintextColor));
+    color: #fff;
+    text-align: center;
+    font-feature-settings:
+      "clig" off,
+      "liga" off;
+    font-family: IBM Plex Sans Arabic;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    margin: 0px 3px !important;
+    padding: 6px var(--16, 16px) 2px var(--16, 16px);
+  }
+  button {
+    border-radius: 4px;
+    border: 1px solid var(--neutral-300, #e0e0e0);
+    background: var(--neutral-0, #fff);
+    text-align: center;
+    font-feature-settings:
+      "clig" off,
+      "liga" off;
+    font-family: IBM Plex Sans Arabic;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    margin: 0px 3px !important;
+    padding: 6px var(--16, 16px) 2px var(--16, 16px);
+  }
+}
+
+.deskContent {
+}
+
+.phoneContent {
+}
+
+@media all and (max-width: 959px) {
+  .deskContent {
+    display: block;
+  }
+  .phoneContent {
+    display: none;
+  }
+}
+
+@media all and (max-width: 479px) {
+  .deskContent {
+    display: none;
+  }
+  .phoneContent {
+    display: block;
+  }
+}
+.split-grid {
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.image-button {
+  color: #bdbdbd;
+  &:focus {
+    color: var(--mainColor) !important ;
+  }
+}
+h5 {
+  color: var(--mainColor);
+  margin-bottom: 0;
+}
+.ng-placeholder {
+  padding-right: 10px;
+}
+.ng-value-label {
+  padding-right: 10px;
+}
+/* On screens that are 600px wide or less */
+@media screen and (max-width: 800px) {
+  .default-table {
+    overflow: scroll;
+    width: 100%;
+    th {
+      min-width: 150px;
+    }
+  }
+}
+
+.button {
+  background: var(--ButtonColor);
+  background-color: var(--mainColor);
+  font-weight: bold;
+  padding:10px 0px;
+}
+
+.empty-filter-title {
+  color: #757575;
+  text-align: center;
+  padding: 20px 0px;
+  font-weight: bold;
+}
+.f-w-mobile {
+}
+.my-4-mobile {
+  margin: unset;
+}
+.mt-4-mobile {
+  margin-top: unset;
+}
+.mb-4-mobile {
+  margin-bottom: unset;
+}
+.mx-0-mobile {
+  margin-left: unset;
+  margin-right: unset;
+}
+.px-0-mobile {
+  padding-left: unset;
+  padding-right: unset;
+}
+.my-0-mobile {
+  margin-top: unset;
+  margin-bottom: unset;
+}
+.py-0-mobile {
+  padding-top: unset;
+  padding-bottom: unset;
+}
+
+.hidden-mobile {
+  visibility: visible;
+}
+.show-mobile {
+  display: none;
+}
+.flex-wrap-mobile {
+}
+.flex-mobile {
+}
+@media (max-width: 946px) {
+  .py-0-mobile {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+  .flex-mobile {
+    display: flex !important;
+  }
+  .show-mobile {
+    display: block;
+  }
+
+  .px-0-mobile {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .hidden-mobile {
+    visibility: hidden !important;
+    display: none;
+  }
+  .flex-wrap-mobile {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .f-w-mobile {
+    width: 100% !important;
+  }
+  .my-4-mobile {
+    margin: 20px 0px;
+  }
+  .mt-4-mobile {
+    margin-top: 20px;
+    margin-bottom: 0px !important;
+  }
+  .mb-4-mobile {
+    margin-bottom: 20px;
+  }
+  .mx-0-mobile {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .my-0-mobile {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
